@@ -1,0 +1,3 @@
+/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4/cmake-build-debug/CMakeFiles/lab4.dir
+/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
