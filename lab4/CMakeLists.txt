@@ -3,4 +3,4 @@ project(lab4)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(lab4 main.cpp Input.cpp Input.h)
+add_executable(lab4 main.cpp Input.cpp Input.h executor.cpp executor.h)
