@@ -23,8 +23,6 @@
 using namespace std;
 
 class Input {
-
-
     string format;
     string folderPath;
 public:
@@ -35,15 +33,12 @@ public:
 };
 
 class InputFolder {
-    　
 private:
     string folderPath;
-    vector<Input> ls;
 public:
     ~InputFolder() = default;
-
+    vector<Input> ls;
     explicit InputFolder(const string &folderPath);
-
 
 };
 

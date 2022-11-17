@@ -7,8 +7,11 @@ string eg::generate() {
     switch (t) {
         case Int:
             return randInt(a, b);
-        case Char:
-            return randChar() + "";
+        case Char: {
+            string s = "";
+            return randChar() + s;
+        }
+
         case String:
             return randString(a, b);
     }
@@ -53,12 +56,31 @@ string executor::makeTst() {
     return ans;
 }
 
-executor::executor(Input *input) : input(input) {
+
+executor::executor(Input *input, output *o) : input(input), o(o) {
     tstfile = input->getFolderPath() + "/tstfile.txt";
+    debug ("!folder path :" +input->getFolderPath())
+    makeList();
+    refreshTst();
+}
+
+
+void executor::testA() {
+    for (int i = 0; i < input->filenames.size(); i++) {
+        string a = input->filenames[i];
+
+        for (int j = 0; j < i; j++) {
+            refreshTst();
+            string b = input->filenames[j];
+            exeUnit e(a, b, input);
+            o->add(manyTst(e), a, b);
+        }
+    }
 }
 
 void executor::refreshTst() {
     ofstream ofs(tstfile, ios::out);
+    debug("!tstfile is "+tstfile)
     if (!ofs) {
         debug("fail to open " + input->getFormat())
         return;
@@ -68,16 +90,17 @@ void executor::refreshTst() {
 
 }
 
-void executor::testAll() {
-    for (int i = 0; i < input->filenames.size(); i++) {
-        string a = input->filenames[i];
+bool executor::manyTst(exeUnit e) {
 
-        for (int j = 0; j < i; j++) {
-            string b = input->filenames[j];
-            exeUnit e(a, b, input);
-            o.add(e.manyTst(), a, b);
-        }
+    int i = 10;
+    bool ans = 1;
+    while (i != 0) {
+        ans &= e.test();
+        i--;
     }
+    return ans;
+
+
 }
 
 
@@ -89,12 +112,11 @@ void execute(string f) {
 bool exeUnit::test() {
     execute(f0);
     execute(f1);
-
     string cmd;
-    cmd = f0.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "input.txt " + input->getFolderPath() +
+    cmd = f0.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "/tstfile.txt " + input->getFolderPath() +
           "/output0.txt";
     system(cmd.c_str());
-    cmd = f1.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "input.txt " + input->getFolderPath() +
+    cmd = f1.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "/tstfile.txt " + input->getFolderPath() +
           "/output1.txt";
     system(cmd.c_str());
     ifstream ifs0 = std::ifstream(input->getFolderPath() + "/output0.txt", std::ios::in);
@@ -103,6 +125,7 @@ bool exeUnit::test() {
         debug("fail to open " + input->getFormat())
         return 0;
     }
+
     ifstream ifs1 = std::ifstream(input->getFolderPath() + "/output1.txt", std::ios::out);
     ifs1.unsetf(ios::skipws);
     if (!ifs1) {
@@ -118,15 +141,5 @@ bool exeUnit::test() {
         return 1;
 }
 
-
-bool exeUnit::manyTst() {
-    int i=10;
-    bool ans =1;
-    while(i!=0){
-        ans &=test();
-        i--;
-    }
-    return ans;
-}
 
 exeUnit::exeUnit(const string &f0, const string &f1, Input *input) : f0(f0), f1(f1), input(input) {}

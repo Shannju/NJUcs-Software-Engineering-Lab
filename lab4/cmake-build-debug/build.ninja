@@ -70,6 +70,12 @@ build CMakeFiles/lab4.dir/executor.cpp.o: CXX_COMPILER__lab4_Debug /Users/shan/D
   OBJECT_DIR = CMakeFiles/lab4.dir
   OBJECT_FILE_DIR = CMakeFiles/lab4.dir
 
+build CMakeFiles/lab4.dir/output.cpp.o: CXX_COMPILER__lab4_Debug /Users/shan/Desktop/Software$ Engineering/NJUcs-Software-Engineering-Lab/lab4/output.cpp || cmake_object_order_depends_target_lab4
+  DEP_FILE = CMakeFiles/lab4.dir/output.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -std=gnu++14
+  OBJECT_DIR = CMakeFiles/lab4.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab4.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target lab4
@@ -78,7 +84,7 @@ build CMakeFiles/lab4.dir/executor.cpp.o: CXX_COMPILER__lab4_Debug /Users/shan/D
 #############################################
 # Link the executable lab4
 
-build lab4: CXX_EXECUTABLE_LINKER__lab4_Debug CMakeFiles/lab4.dir/main.cpp.o CMakeFiles/lab4.dir/Input.cpp.o CMakeFiles/lab4.dir/rand.cpp.o CMakeFiles/lab4.dir/executor.cpp.o
+build lab4: CXX_EXECUTABLE_LINKER__lab4_Debug CMakeFiles/lab4.dir/main.cpp.o CMakeFiles/lab4.dir/Input.cpp.o CMakeFiles/lab4.dir/rand.cpp.o CMakeFiles/lab4.dir/executor.cpp.o CMakeFiles/lab4.dir/output.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
   OBJECT_DIR = CMakeFiles/lab4.dir
   POST_BUILD = :

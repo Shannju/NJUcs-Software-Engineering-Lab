@@ -5,7 +5,6 @@
 #ifndef LAB4_OUTPUT_H
 #define LAB4_OUTPUT_H
 #include "Input.h"
-#include "executor.h"
 using namespace std;
 
 
@@ -13,9 +12,7 @@ class output {
     ofstream equal;
     ofstream inequal;
 public:
-    explicit output();
     void add (bool e,string a,string b);
-     ~output();
 };
 
 
