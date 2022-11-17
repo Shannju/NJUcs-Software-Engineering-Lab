@@ -18,9 +18,12 @@ string eg::generate() {
 }
 
 void executor::makeList() {
-    ifstream ifs = std::ifstream(input->getFormat(), std::ios::out);
+    string abspath =
+            "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" +
+                    input->getFormat().substr(2);
+    ifstream ifs = std::ifstream(abspath, std::ios::out);
     if (!ifs) {
-        debug("fail to open " + input->getFormat())
+        debug("fail to open3 " + input->getFormat())
         return;
     }
     string tmp;
@@ -79,10 +82,13 @@ void executor::testA() {
 }
 
 void executor::refreshTst() {
-    ofstream ofs(tstfile, ios::out);
+    string abspath =
+            "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" +
+                    tstfile.substr(2);
+    ofstream ofs(abspath, ios::out);
     debug("!tstfile is " + tstfile)
     if (!ofs) {
-        debug("fail to open " + input->getFormat())
+        debug("f?ail to open " + input->getFormat())
         return;
     }
     ofs << makeTst();
@@ -106,9 +112,9 @@ bool executor::manyTst(exeUnit e) {
 
 void execute(string f) {
     string abspath =
-            "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" ;
+            "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" ;
 
-    string cmd = "g++ " + abspath+f.substr(2) + " -o " + abspath+f.substr(0, f.size() - 4);
+    string cmd = "g++ " + abspath+f.substr(2) + " -o " + abspath+f.substr(2, f.size() - 6);
     system(cmd.c_str());
     debug("!!execute " +cmd)
 }
@@ -118,30 +124,31 @@ bool exeUnit::test() {
     execute(f1);
     string cmd;
     string abspath =
-            "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" +
+            "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" +
             input->getFolderPath().substr(2);
-    cmd = "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" + f0.substr(2, f0.size() - 5) +
-          "o <" + abspath + "/tstfile.txt " + ">" + abspath +
+    cmd = "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" + f0.substr(2, f0.size() - 4) +
+          " <" + abspath + "/tstfile.txt " + ">" + abspath +
           "/output0.txt";
     system(cmd.c_str());
     debug("!!cmd " + cmd)
-    cmd = "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" + f1.substr(2, f0.size() - 5) +
-          "o <" + abspath + "/tstfile.txt " + abspath +
+    cmd = "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4" + f1.substr(2, f0.size() - 4) +
+          " <" + abspath + "/tstfile.txt " + abspath +
           "/output1.txt";
     system(cmd.c_str());
-    ifstream ifs0 = std::ifstream(input->getFolderPath() + "/output0.txt", std::ios::in);
+    ifstream ifs0 = std::ifstream(abspath + "/output0.txt", std::ios::in);
     ifs0.unsetf(ios::skipws);
     if (!ifs0) {
-        debug("fail to open " + input->getFormat())
+        debug("fail to open0 " + input->getFormat())
         return 0;
     }
 
-    ifstream ifs1 = std::ifstream(input->getFolderPath() + "/output1.txt", std::ios::out);
+    ifstream ifs1 = std::ifstream(abspath + "/output0.txt", std::ios::in);
     ifs1.unsetf(ios::skipws);
     if (!ifs1) {
-        debug("fail to open " + input->getFormat())
+        debug("fail to open1 " + input->getFormat())
         return 0;
     }
+
     string s0, s1;
     ifs0 >> s0;
     ifs1 >> s1;
@@ -149,6 +156,8 @@ bool exeUnit::test() {
         return 0;
     else
         return 1;
+    ifs0.close();
+    ifs1.close();
 }
 
 
