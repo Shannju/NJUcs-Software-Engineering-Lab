@@ -5,11 +5,11 @@
 #include "output.h"
 
 output::output() {
-    equal = std::ofstream("../equal.csv", std::ios::out);
+    equal = std::ofstream("../output/equal.csv", std::ios::out);
     if (equal.is_open()) {
         equal << "file1" << ',' << "file2"  << endl;
     } else debug("euqal.csv creation failed")
-    inequal = std::ofstream("../inequal.csv", std::ios::out);
+    inequal = std::ofstream("../output/inequal.csv", std::ios::out);
     if (inequal.is_open()) {
         inequal << "file1" << ',' << "file2" << endl;
     } else debug("ineuqal.csv creation failed")

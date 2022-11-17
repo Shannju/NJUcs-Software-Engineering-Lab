@@ -15,9 +15,9 @@ string eg::generate() {
 }
 
 void executor::makeList() {
-    ifstream ifs = std::ifstream(i->getFormat(), std::ios::out);
-    if (!ifs.is_open()) {
-        debug("fail to open " + i->getFormat())
+    ifstream ifs = std::ifstream(input->getFormat(), std::ios::out);
+    if (!ifs) {
+        debug("fail to open " + input->getFormat())
         return;
     }
 
@@ -48,13 +48,52 @@ void executor::makeList() {
 
 string executor::makeTst() {
     string ans;
-    for (int i = 0; i <egList.size();i++)
-    {
-        ans +=egList[i].generate()+" ";
+    for (int i = 0; i < egList.size(); i++) {
+        ans += egList[i].generate() + " ";
     }
     return ans;
 }
 
-executor::executor(Input *i) : i(i) {
-    tstfile = i->getFolderPath() + "/tstfile.txt";
+executor::executor(Input *input) : input(input) {
+    tstfile = input->getFolderPath() + "/tstfile.txt";
+}
+
+void executor::refreshTst() {
+    ofstream ofs(tstfile, ios::out);
+    if (!ofs) {
+        debug("fail to open " + input->getFormat())
+        return;
+    }
+    ofs << makeTst();
+    ofs.close();
+
+}
+
+void executor::testAll() {
+    for (int i =0;i<input->filenames.size();i++)
+    {
+        for (int j=0;j<i;j++)
+        {
+            exeUnit e (input->filenames[i],input->filenames[j]);
+            if (e.manyTst()==1)
+
+        }
+
+    }
+
+
+}
+
+exeUnit::exeUnit(const string &f0, const string &f1) : f0(f0), f1(f1) {}
+
+bool exeUnit::test() {
+    return false;
+}
+
+string exeUnit::randomIns() {
+    return std::string();
+}
+
+bool exeUnit::manyTst() {
+    return false;
 }

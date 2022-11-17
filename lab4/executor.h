@@ -7,6 +7,7 @@
 
 #include "Input.h"
 #include "rand.h"
+#include "output.h"
 
 enum type {
     Int, Char, String
@@ -24,20 +25,24 @@ class exeUnit {
     string f0, f1;
     bool test();//执行一次随机tst 返回结果是否一样
     string randomIns();//生成一条shell指令
+    bool manyTst(); //  多次执行指令判断
 public:
-
+    exeUnit(const string &f0, const string &f1);
 };
 
 //对于一个文件夹执行测试
 class executor {
-    Input *i;
+    Input *input;
     vector<string> ls;
     vector<eg> egList;
     string tstfile;
+    output o;
 public:
     void makeList();//初始化eglist
-    string makeTst();//生成测试用例文件
-    explicit executor(Input *i);
+    string makeTst();//生成测试用例内容
+    void refreshTst();//刷新测试文件内容
+    void testAll();
+    explicit executor(Input *input);
 };
 
 
