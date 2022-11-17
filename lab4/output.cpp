@@ -7,7 +7,7 @@
 output::output() {
     equal = std::ofstream("../output/equal.csv", std::ios::out);
     if (equal.is_open()) {
-        equal << "file1" << ',' << "file2"  << endl;
+        equal << "file1" << ',' << "file2" << endl;
     } else debug("euqal.csv creation failed")
     inequal = std::ofstream("../output/inequal.csv", std::ios::out);
     if (inequal.is_open()) {
@@ -20,7 +20,7 @@ output::~output() {
     inequal.close();
 }
 
-void output::add(bool e, pair<string, string> p) {
-    if (e) { equal << p.first << ',' << p.second << endl; }
-    else { inequal << p.first << ',' << p.second << endl; }
+void output::add(bool e, string a, string b) {
+    if (e) { equal << a << ',' << b << endl; }
+    else { inequal << a << ',' << b << endl; }
 }

@@ -20,7 +20,6 @@ void executor::makeList() {
         debug("fail to open " + input->getFormat())
         return;
     }
-
     string tmp;
     while (ifs >> tmp) {
         if (tmp.compare("char") == 0) {
@@ -70,30 +69,64 @@ void executor::refreshTst() {
 }
 
 void executor::testAll() {
-    for (int i =0;i<input->filenames.size();i++)
-    {
-        for (int j=0;j<i;j++)
-        {
-            exeUnit e (input->filenames[i],input->filenames[j]);
-            if (e.manyTst()==1)
+    for (int i = 0; i < input->filenames.size(); i++) {
+        string a = input->filenames[i];
 
+        for (int j = 0; j < i; j++) {
+            string b = input->filenames[j];
+            exeUnit e(a, b, input);
+            o.add(e.manyTst(), a, b);
         }
-
     }
-
-
 }
 
-exeUnit::exeUnit(const string &f0, const string &f1) : f0(f0), f1(f1) {}
+
+void execute(string f) {
+    string cmd = "g++ " + f + " -o " + f.substr(0, f.size() - 4);
+    system(cmd.c_str());
+}
 
 bool exeUnit::test() {
-    return false;
+    execute(f0);
+    execute(f1);
+
+    string cmd;
+    cmd = f0.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "input.txt " + input->getFolderPath() +
+          "/output0.txt";
+    system(cmd.c_str());
+    cmd = f1.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "input.txt " + input->getFolderPath() +
+          "/output1.txt";
+    system(cmd.c_str());
+    ifstream ifs0 = std::ifstream(input->getFolderPath() + "/output0.txt", std::ios::in);
+    ifs0.unsetf(ios::skipws);
+    if (!ifs0) {
+        debug("fail to open " + input->getFormat())
+        return 0;
+    }
+    ifstream ifs1 = std::ifstream(input->getFolderPath() + "/output1.txt", std::ios::out);
+    ifs1.unsetf(ios::skipws);
+    if (!ifs1) {
+        debug("fail to open " + input->getFormat())
+        return 0;
+    }
+    string s0, s1;
+    ifs0 >> s0;
+    ifs1 >> s1;
+    if (strcmp(s0.c_str(), s1.c_str()) != 0)
+        return 0;
+    else
+        return 1;
 }
 
-string exeUnit::randomIns() {
-    return std::string();
-}
 
 bool exeUnit::manyTst() {
-    return false;
+    int i=10;
+    bool ans =1;
+    while(i!=0){
+        ans &=test();
+        i--;
+    }
+    return ans;
 }
+
+exeUnit::exeUnit(const string &f0, const string &f1, Input *input) : f0(f0), f1(f1), input(input) {}

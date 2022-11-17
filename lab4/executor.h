@@ -8,6 +8,8 @@
 #include "Input.h"
 #include "rand.h"
 #include "output.h"
+#include <string>
+using namespace std;
 
 enum type {
     Int, Char, String
@@ -16,18 +18,20 @@ enum type {
 struct eg {
     type t;
     int a, b;
+
     string generate();
+
     eg(type t, int a, int b) : t(t), a(a), b(b) {};
 };
 
 
 class exeUnit {
     string f0, f1;
+    Input *input;
     bool test();//执行一次随机tst 返回结果是否一样
-    string randomIns();//生成一条shell指令
-    bool manyTst(); //  多次执行指令判断
 public:
-    exeUnit(const string &f0, const string &f1);
+    exeUnit(const string &f0, const string &f1, Input *input);
+    bool manyTst(); //  多次执行指令判断
 };
 
 //对于一个文件夹执行测试
@@ -45,5 +49,5 @@ public:
     explicit executor(Input *input);
 };
 
-
+void execute(string f);
 #endif //LAB4_EXECUTOR_H

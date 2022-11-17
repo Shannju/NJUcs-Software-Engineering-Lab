@@ -14,7 +14,7 @@ class output {
     ofstream inequal;
 public:
     explicit output();
-    void add (bool e,pair<string,string>p);
+    void add (bool e,string a,string b);
      ~output();
 };
 
