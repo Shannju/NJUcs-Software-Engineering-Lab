@@ -25,10 +25,11 @@ using namespace std;
 class Input {
 
     vector<std::string> filenames;
-
+    string format;    string folderPath;
 public:
-    string format;
-    string folderPath;
+string getFormat();
+string getFolderPath();
+
     explicit Input(const string &folderPath);
 };
 
