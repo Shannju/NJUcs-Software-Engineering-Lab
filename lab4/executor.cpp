@@ -59,7 +59,7 @@ string executor::makeTst() {
 
 executor::executor(Input *input, output *o) : input(input), o(o) {
     tstfile = input->getFolderPath() + "/tstfile.txt";
-    debug ("!folder path :" +input->getFolderPath())
+    debug ("!folder path :" + input->getFolderPath())
     makeList();
     refreshTst();
 }
@@ -80,7 +80,7 @@ void executor::testA() {
 
 void executor::refreshTst() {
     ofstream ofs(tstfile, ios::out);
-    debug("!tstfile is "+tstfile)
+    debug("!tstfile is " + tstfile)
     if (!ofs) {
         debug("fail to open " + input->getFormat())
         return;
@@ -105,18 +105,28 @@ bool executor::manyTst(exeUnit e) {
 
 
 void execute(string f) {
-    string cmd = "g++ " + f + " -o " + f.substr(0, f.size() - 4);
+    string abspath =
+            "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" ;
+
+    string cmd = "g++ " + abspath+f.substr(2) + " -o " + abspath+f.substr(0, f.size() - 4);
     system(cmd.c_str());
+    debug("!!execute " +cmd)
 }
 
 bool exeUnit::test() {
     execute(f0);
     execute(f1);
     string cmd;
-    cmd = f0.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "/tstfile.txt " + input->getFolderPath() +
+    string abspath =
+            "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" +
+            input->getFolderPath().substr(2);
+    cmd = "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" + f0.substr(2, f0.size() - 5) +
+          "o <" + abspath + "/tstfile.txt " + ">" + abspath +
           "/output0.txt";
     system(cmd.c_str());
-    cmd = f1.substr(0, f0.size() - 4) + " <" + input->getFolderPath() + "/tstfile.txt " + input->getFolderPath() +
+    debug("!!cmd " + cmd)
+    cmd = "/Users/shan/Desktop/Software Engineering/NJUcs-Software-Engineering-Lab/lab4" + f1.substr(2, f0.size() - 5) +
+          "o <" + abspath + "/tstfile.txt " + abspath +
           "/output1.txt";
     system(cmd.c_str());
     ifstream ifs0 = std::ifstream(input->getFolderPath() + "/output0.txt", std::ios::in);

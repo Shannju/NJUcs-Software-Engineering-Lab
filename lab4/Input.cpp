@@ -10,6 +10,7 @@ void GetFileNames(std::string path, std::vector<std::string> &filenames) {
     struct dirent *ptr;
     if (!(pDir = opendir(path.c_str()))) {
         std::cout << "Folder doesn't Exist!" << std::endl;
+        debug("!!! path is "+path)
         return;
     }
     while ((ptr = readdir(pDir)) != 0) {
