@@ -7,12 +7,12 @@
 output::output() {
     equal = std::ofstream("../equal.csv", std::ios::out);
     if (equal.is_open()) {
-        equal << "file1" << ',' << "file2" << ',' << endl;
-    }
+        equal << "file1" << ',' << "file2"  << endl;
+    } else debug("euqal.csv creation failed")
     inequal = std::ofstream("../inequal.csv", std::ios::out);
     if (inequal.is_open()) {
-        inequal << "file1" << ',' << "file2" << ',' << endl;
-    }
+        inequal << "file1" << ',' << "file2" << endl;
+    } else debug("ineuqal.csv creation failed")
 }
 
 output::~output() {
