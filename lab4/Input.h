@@ -23,10 +23,13 @@
 using namespace std;
 
 class Input {
-    string folderPath;
+
     vector<std::string> filenames;
-    string format;
+    string format;    string folderPath;
 public:
+string getFormat();
+string getFolderPath();
+
     explicit Input(const string &folderPath);
 };
 
@@ -37,6 +40,7 @@ private:
     vector<Input> ls;
 public:
     ~InputFolder() = default;
+
     explicit InputFolder(const string &folderPath);
 
 

@@ -43,3 +43,11 @@ Input::Input(const string &folderPath) : folderPath(folderPath) {
     format = folderPath + "/stdin_format.txt";
     debug(format);
 }
+
+string Input::getFormat() {
+    return format;
+}
+
+string Input::getFolderPath() {
+    return folderPath;
+}
