@@ -70,7 +70,13 @@ executor::executor(Input *input, output *o) : input(input), o(o) {
 
 void executor::testAll() {
     for (int i = 0; i < input->filenames.size(); i++) {
+
         string a = input->filenames[i];
+
+        if (a.find(".cpp") == a.npos) {
+            debug("sth not "+ a)
+            continue;
+        }
 
         for (int j = 0; j < i; j++) {
             refreshTst();
@@ -96,7 +102,7 @@ void executor::refreshTst() {
 
 bool executor::manyTst(exeUnit e) {
 
-    int i = 10;
+    int i = 1;
     bool ans = 1;
     while (i != 0) {
         ans &= e.test();
@@ -108,7 +114,7 @@ bool executor::manyTst(exeUnit e) {
 
 void execute(string f) {
 
-    string cmd = "g++ .." + f.substr(2) + " -o .." +f.substr(2, f.size() - 6);
+    string cmd = "g++ .." + f.substr(2) + " -o .." +f.substr(2, f.size() - 6)+".out";
     system(cmd.c_str());
 
 //    debug("here~~~~~ execute " +cmd)
@@ -122,12 +128,12 @@ bool exeUnit::test() {
 //    debug("~~"+relativePath);
 
     cmd =  f0.substr(0, f0.size() - 4) +
-          " <" + relativePath + "/tstfile.txt " + ">" + relativePath +
+          ".out <" + relativePath + "/tstfile.txt " + ">" + relativePath +
           "/output0.txt";
     system(cmd.c_str());
 //    debug("!!cmd " + cmd)
     cmd = f1.substr(0, f0.size() - 4) +
-          " <" + relativePath + "/tstfile.txt " + ">" + relativePath +
+          ".out <" + relativePath + "/tstfile.txt " + ">" + relativePath +
           "/output0.txt";
     system(cmd.c_str());
     ifstream ifs0 = std::ifstream(relativePath + "/output0.txt", std::ios::in);

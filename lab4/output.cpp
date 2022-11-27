@@ -5,6 +5,7 @@
 #include "output.h"
 
 void output::add(bool e, string a, string b) {
+    debug("!!!!add!" +a+b)
     equal = std::ofstream("../output/equal.csv", std::ios::out | std::ios::app);
     if (equal.is_open()) {
         equal << "file1" << ',' << "file2" << endl;

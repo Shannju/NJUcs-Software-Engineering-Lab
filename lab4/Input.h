@@ -39,6 +39,7 @@ public:
     ~InputFolder() = default;
     vector<Input> ls;
     explicit InputFolder(const string &folderPath);
+    void clean();
 
 };
 
