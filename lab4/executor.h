@@ -45,7 +45,7 @@ public:
     void makeList();//初始化eglist
     string makeTst();//生成测试用例内容
     void refreshTst();//刷新测试文件内容
-    void testA();
+    void testAll();
 
     executor(Input *input, output *o);
 

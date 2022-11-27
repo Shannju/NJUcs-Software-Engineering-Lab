@@ -11,7 +11,7 @@ int main() {
     for (int i =0;i<inFolder.ls.size();i++)
     {
         executor e(&inFolder.ls[i],&o);
-        e.testA();
+        e.testAll();
     }
     pause();
     return 0;
