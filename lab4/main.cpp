@@ -14,6 +14,7 @@ int main() {
         executor e(&inFolder.ls[i],&o);
         e.testAll();
     }
-    pause();
+    o.writeAb();
+
     return 0;
 }

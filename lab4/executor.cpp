@@ -86,8 +86,9 @@ void executor::testAll() {
                 debug("sth not "+ b)
                 continue;
             }
-            exeUnit e(a, b, input);
-            o->add(manyTst(e,1), a, b);
+            exeUnit e(a, b, input,o);
+            if (e.test()!=-1)
+                o->add(manyTst(e,1), a, b);
         }
     }
 }
@@ -114,20 +115,6 @@ bool executor::manyTst(exeUnit e,int n) {
     return ans;
 }
 
-void executor::writeAb() {
-for(int i=0;i<abnormal.size();i++)
-    o->addAbnormal(abnormal[i]);
-}
-
-void executor::addAb(string s) {
-    for(int i=0;i<abnormal.size();i++)
-    {        if (abnormal[i]==s)
-            return;
-    abnormal.push_back(s);}
-
-
-
-}
 
 
 bool execute(string f) {
@@ -147,6 +134,13 @@ bool execute(string f) {
 int exeUnit::test() {
     string cmd;
     string relativePath =input->getFolderPath();
+    if (!execute(f0))
+    {o->addAb(f0);
+    return -1;}
+    if (!execute(f1))
+    {o->addAb(f1);
+        return -1;}
+
 //    debug("~~"+relativePath);
 
     cmd =  f0.substr(0, f0.size() - 4) +
@@ -192,5 +186,8 @@ int exeUnit::test() {
 
 }
 
+exeUnit::exeUnit(const string &f0, const string &f1, Input *input, output *o) : f0(f0), f1(f1), input(input), o(o) {}
 
-exeUnit::exeUnit(const string &f0, const string &f1, Input *input) : f0(f0), f1(f1), input(input) {}
+
+
+

@@ -14,6 +14,19 @@ void output::add(bool e, string a, string b) {
 
 }
 
+void output::writeAb() {
+    for (int i = 0; i < abnormalList.size(); i++)
+        addAbnormal(abnormalList[i]);
+}
+
+void output::addAb(string s) {
+    for (int i = 0; i < abnormalList.size(); i++) {
+        if (abnormalList[i] == s)
+            return;
+    }
+    abnormalList.push_back(s);
+}
+
 void output::init() {
     equal = std::ofstream("../output/equal.csv", std::ios::out | std::ios::app);
     if (equal.is_open()) {
@@ -31,11 +44,12 @@ void output::init() {
 
 void output::addAbnormal(string a) {
 //    abnormal = std::ofstream("../output/abnormal.csv", std::ios::out | std::ios::app);
-abnormal << a.substr(2) << endl;
+    abnormal << a.substr(2) << endl;
 }
 
 output::~output() {
     equal.close();
     inequal.close();
+    writeAb();
     abnormal.close();
 }

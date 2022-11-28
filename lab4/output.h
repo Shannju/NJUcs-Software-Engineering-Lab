@@ -12,7 +12,10 @@ class output {
     ofstream equal;
     ofstream inequal;
     ofstream abnormal;
+    vector<string> abnormalList;
 public:
+    void writeAb();
+    void addAb(string s);
     void add (bool e,string a,string b);
     void addAbnormal(string a);
     void init();

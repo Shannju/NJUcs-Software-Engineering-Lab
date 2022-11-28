@@ -27,9 +27,11 @@ struct eg {
 class exeUnit {
     string f0, f1;
     Input *input;
+    output * o;
 
 public:
-    exeUnit(const string &f0, const string &f1, Input *input);
+    exeUnit(const string &f0, const string &f1, Input *input, output *o);
+
     int test();//执行一次随机tst 返回结果是否一样
 
 };
@@ -38,7 +40,7 @@ public:
 class executor {
     Input *input;
     vector<string> ls;
-    vector<string> abnormal;
+
     vector<eg> egList;
     string tstfile;
     output * o;
@@ -47,8 +49,7 @@ public:
     string makeTst();//生成测试用例内容
     void refreshTst();//刷新测试文件内容
     void testAll();
-void writeAb();
-void addAb(string s);
+
     executor(Input *input, output *o);
 
     bool manyTst(exeUnit e,int n); //  多次执行指令判断
