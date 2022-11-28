@@ -8,6 +8,7 @@
 int main() {
     InputFolder inFolder("../input");
     output o;
+    o.init();
     for (int i =0;i<inFolder.ls.size();i++)
     {
         executor e(&inFolder.ls[i],&o);

@@ -51,7 +51,7 @@ void InputFolder::clean() {
                       string a = ptr->d_name;
 
             if (a.find(".") != a.npos) {
-                debug("sth not "+ a)
+//                debug("sth not "+ a)
                 continue;
             }
 //            filenames.push_back(folderPath + "/" + ptr->d_name);

@@ -30,7 +30,7 @@ class exeUnit {
 
 public:
     exeUnit(const string &f0, const string &f1, Input *input);
-    bool test();//执行一次随机tst 返回结果是否一样
+    int test();//执行一次随机tst 返回结果是否一样
 
 };
 
@@ -38,6 +38,7 @@ public:
 class executor {
     Input *input;
     vector<string> ls;
+    vector<string> abnormal;
     vector<eg> egList;
     string tstfile;
     output * o;
@@ -46,11 +47,12 @@ public:
     string makeTst();//生成测试用例内容
     void refreshTst();//刷新测试文件内容
     void testAll();
-
+void writeAb();
+void addAb(string s);
     executor(Input *input, output *o);
 
-    bool manyTst(exeUnit e); //  多次执行指令判断
+    bool manyTst(exeUnit e,int n); //  多次执行指令判断
 };
 
-void execute(string f);
+bool execute(string f);
 #endif //LAB4_EXECUTOR_H

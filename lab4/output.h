@@ -11,8 +11,13 @@ using namespace std;
 class output {
     ofstream equal;
     ofstream inequal;
+    ofstream abnormal;
 public:
     void add (bool e,string a,string b);
+    void addAbnormal(string a);
+    void init();
+
+    virtual ~output();
 };
 
 

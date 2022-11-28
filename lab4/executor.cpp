@@ -69,8 +69,8 @@ executor::executor(Input *input, output *o) : input(input), o(o) {
 
 
 void executor::testAll() {
-    for (int i = 0; i < input->filenames.size(); i++) {
 
+    for (int i = 0; i < input->filenames.size(); i++) {
         string a = input->filenames[i];
 
         if (a.find(".cpp") == a.npos) {
@@ -79,10 +79,15 @@ void executor::testAll() {
         }
 
         for (int j = 0; j < i; j++) {
+
             refreshTst();
             string b = input->filenames[j];
+            if (b.find(".cpp") == b.npos) {
+                debug("sth not "+ b)
+                continue;
+            }
             exeUnit e(a, b, input);
-            o->add(manyTst(e), a, b);
+            o->add(manyTst(e,1), a, b);
         }
     }
 }
@@ -100,29 +105,46 @@ void executor::refreshTst() {
 
 }
 
-bool executor::manyTst(exeUnit e) {
-
-    int i = 1;
+bool executor::manyTst(exeUnit e,int n) {
     bool ans = 1;
-    while (i != 0) {
+    while (n != 0) {
         ans &= e.test();
-        i--;
+        n--;
     }
     return ans;
 }
 
+void executor::writeAb() {
+for(int i=0;i<abnormal.size();i++)
+    o->addAbnormal(abnormal[i]);
+}
 
-void execute(string f) {
+void executor::addAb(string s) {
+    for(int i=0;i<abnormal.size();i++)
+    {        if (abnormal[i]==s)
+            return;
+    abnormal.push_back(s);}
+
+
+
+}
+
+
+bool execute(string f) {
 
     string cmd = "g++ .." + f.substr(2) + " -o .." +f.substr(2, f.size() - 6)+".out";
     system(cmd.c_str());
+    ifstream ifs=std::ifstream(".."+f.substr(2, f.size() - 6)+".out", std::ios::in);
+    if(!ifs)
+    {
+        return 0;
+    }
+    return 1;
 
 //    debug("here~~~~~ execute " +cmd)
 }
 
-bool exeUnit::test() {
-    execute(f0);
-    execute(f1);
+int exeUnit::test() {
     string cmd;
     string relativePath =input->getFolderPath();
 //    debug("~~"+relativePath);
@@ -132,10 +154,16 @@ bool exeUnit::test() {
           "/output0.txt";
     system(cmd.c_str());
 //    debug("!!cmd " + cmd)
+
+
     cmd = f1.substr(0, f0.size() - 4) +
           ".out <" + relativePath + "/tstfile.txt " + ">" + relativePath +
-          "/output0.txt";
+          "/output1.txt";
     system(cmd.c_str());
+
+
+
+
     ifstream ifs0 = std::ifstream(relativePath + "/output0.txt", std::ios::in);
     ifs0.unsetf(ios::skipws);
     if (!ifs0) {
@@ -143,7 +171,7 @@ bool exeUnit::test() {
         return 0;
     }
 
-    ifstream ifs1 = std::ifstream(relativePath+ "/output0.txt", std::ios::in);
+    ifstream ifs1 = std::ifstream(relativePath+ "/output1.txt", std::ios::in);
     ifs1.unsetf(ios::skipws);
     if (!ifs1) {
         debug("fail to open1 " + input->getFormat())
@@ -151,10 +179,12 @@ bool exeUnit::test() {
     }
 
     string s0, s1;
+
     ifs0 >> s0;
     ifs1 >> s1;
     ifs0.close();
     ifs1.close();
+    debug("s0 "+s0+" s1 "+s1)
     if (strcmp(s0.c_str(), s1.c_str()) != 0)
         return 0;
     else
