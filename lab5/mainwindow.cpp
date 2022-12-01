@@ -165,4 +165,22 @@ void MainWindow::on_btnCompare_released()
 }
 
 
+ufs::ufs(const string &filename) : filename(filename) {
+    std::ifstream ifs (".."+filename,ios::in);
+    string tmp;
+    if (ifs.is_open()) {
+        while (getline(ifs,tmp)) {
+            content += tmp;
+            content += '\n';
+        }
+    } else debug("euqal.csv creation failed");
+    ifs.close();
+}
+
+void ufs::setParent(ufs *parent) {
+    while (!parent->isRoot())
+        parent=parent->getParent();
+    this->p=parent;
+}
+
 

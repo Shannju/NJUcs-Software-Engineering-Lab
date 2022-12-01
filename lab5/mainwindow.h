@@ -7,6 +7,33 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <cstring>
+#include <fstream>
+#include "qdebug.h"
+#include <iostream>
+#include <vector>
+#include "output.h"
+#include "input.h"
+using namespace std;
+#define enable_debug
+#ifdef enable_debug
+#define debug(s) {cerr<< s<<'/n';}
+#else
+#define debug(...){}
+#endif
+
+
+class ufs{
+    ufs * p;
+    string content;
+    string filename;
+public:
+    explicit ufs(const string &filename) ;
+    void setParent(ufs * parent);
+    bool isRoot(){return p == this;}
+    ufs* getParent (){return p;}
+    string getContent(){return content;}
+};
 
 
 QT_BEGIN_NAMESPACE
@@ -23,23 +50,16 @@ public:
 
 
 private:
+    vector<ufs> ufset;
+    output o;
+    input i;
     Ui::MainWindow *ui;
 
     QColor m_txtBox1Color, m_txtBox2Color;
     QColor GetColor(QString);
 
 private slots:
-//    void OnClickBtnCompare();
-//    void ShowHighlighterDlg();
-
-//    void ClearAll();
-
     void on_btnCompare_released();
-
-
-
-public slots:
-
 
 };
 #endif // MAINWINDOW_H

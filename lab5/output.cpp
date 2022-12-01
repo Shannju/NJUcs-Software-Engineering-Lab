@@ -5,10 +5,7 @@
 #include "output.h"
 
 void output::add(bool e, string a, string b) {
-//    debug("!!!!add!" +a+b)
-//    equal = std::ofstream("../output/equal.csv", std::ios::out | std::ios::app);
-//
-//    inequal = std::ofstream("../output/inequal.csv", std::ios::out | std::ios::app);
+
     if (e) { equal << a.substr(2) << ',' << b.substr(2) << endl; }
     else { inequal << a.substr(2) << ',' << b.substr(2) << endl; }
 
