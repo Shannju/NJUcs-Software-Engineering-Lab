@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/lab4.dir/main.cpp.o CMakeFiles/lab4.dir/Input.cpp.o CMakeFiles/lab4.dir/rand.cpp.o CMakeFiles/lab4.dir/executor.cpp.o CMakeFiles/lab4.dir/output.cpp.o -o lab4 
