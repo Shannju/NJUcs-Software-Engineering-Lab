@@ -50,6 +50,9 @@ public:
 class Confirmer {
     vector<ufs> ufset;
     output o;
+    int i;
+public:
+    Confirmer();
 
 
 };

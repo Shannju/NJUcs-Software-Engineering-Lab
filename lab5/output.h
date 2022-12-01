@@ -4,21 +4,28 @@
 
 #ifndef LAB4_OUTPUT_H
 #define LAB4_OUTPUT_H
-#include "Input.h"
+#include <iostream>
+#include <fstream>
+#include "output.h"
+using namespace std;
+#define enable_debug
+#ifdef enable_debug
+#define debug(s) {cerr<< s<<'/n';}
+#else
+#define debug(...){}
+#endif
+
 using namespace std;
 
 
 class output {
     ofstream equal;
     ofstream inequal;
-    ofstream abnormal;
-    vector<string> abnormalList;
+
 public:
-    void writeAb();
-    void addAb(string s);
     void add (bool e,string a,string b);
-    void addAbnormal(string a);
-    void init();
+
+    output();
 
     virtual ~output();
 };

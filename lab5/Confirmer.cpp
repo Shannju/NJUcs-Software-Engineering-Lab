@@ -3,3 +3,8 @@
 //
 
 #include "Confirmer.h"
+
+Confirmer::Confirmer() {
+
+
+}
