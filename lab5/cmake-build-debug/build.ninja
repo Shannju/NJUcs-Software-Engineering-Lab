@@ -1,0 +1,215 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: lab5
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target lab5
+
+
+#############################################
+# Order-only phony target for lab5
+
+build cmake_object_order_depends_target_lab5: phony || lab5_autogen lab5_autogen/mocs_compilation.cpp lab5_autogen/timestamp lab5_autogen_timestamp_deps
+
+build CMakeFiles/lab5.dir/lab5_autogen/mocs_compilation.cpp.o: CXX_COMPILER__lab5_Debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_lab5
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/lab5.dir/lab5_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fPIC -std=gnu++17
+  INCLUDES = -I/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab5.dir/lab5_autogen
+
+build CMakeFiles/lab5.dir/main.cpp.o: CXX_COMPILER__lab5_Debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/main.cpp || cmake_object_order_depends_target_lab5
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/lab5.dir/main.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fPIC -std=gnu++17
+  INCLUDES = -I/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab5.dir
+
+build CMakeFiles/lab5.dir/mainwindow.cpp.o: CXX_COMPILER__lab5_Debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/mainwindow.cpp || cmake_object_order_depends_target_lab5
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/lab5.dir/mainwindow.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fPIC -std=gnu++17
+  INCLUDES = -I/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab5.dir
+
+build CMakeFiles/lab5.dir/output.cpp.o: CXX_COMPILER__lab5_Debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/output.cpp || cmake_object_order_depends_target_lab5
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/lab5.dir/output.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fPIC -std=gnu++17
+  INCLUDES = -I/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab5.dir
+
+build CMakeFiles/lab5.dir/input.cpp.o: CXX_COMPILER__lab5_Debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/input.cpp || cmake_object_order_depends_target_lab5
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/lab5.dir/input.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15 -fPIC -std=gnu++17
+  INCLUDES = -I/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtGui.framework/Headers -isystem /usr/local/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  OBJECT_FILE_DIR = CMakeFiles/lab5.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target lab5
+
+
+#############################################
+# Link the executable lab5
+
+build lab5: CXX_EXECUTABLE_LINKER__lab5_Debug CMakeFiles/lab5.dir/lab5_autogen/mocs_compilation.cpp.o CMakeFiles/lab5.dir/main.cpp.o CMakeFiles/lab5.dir/mainwindow.cpp.o CMakeFiles/lab5.dir/output.cpp.o CMakeFiles/lab5.dir/input.cpp.o | /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets /usr/local/lib/QtGui.framework/Versions/A/QtGui /usr/local/lib/QtCore.framework/Versions/A/QtCore || lab5_autogen lab5_autogen_timestamp_deps
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -mmacosx-version-min=10.15
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/QtWidgets.framework/Versions/A/QtWidgets  /usr/local/lib/QtGui.framework/Versions/A/QtGui  /usr/local/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework  OpenGL  -framework  AGL  -framework AppKit  -framework ImageIO  -framework Metal
+  OBJECT_DIR = CMakeFiles/lab5.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = lab5
+  TARGET_PDB = lab5.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5 -B/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for lab5_autogen_timestamp_deps
+
+build lab5_autogen_timestamp_deps: phony CMakeFiles/lab5_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for lab5_autogen
+
+build lab5_autogen: phony CMakeFiles/lab5_autogen lab5_autogen/include/ui_mainwindow.h lab5_autogen/timestamp lab5_autogen/mocs_compilation.cpp lab5_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for lab5_autogen/timestamp
+
+build lab5_autogen/timestamp lab5_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}lab5_autogen/timestamp ${cmake_ninja_workdir}lab5_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/local/share/qt/libexec/moc /usr/local/share/qt/libexec/uic || lab5_autogen_timestamp_deps
+  COMMAND = cd /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_autogen /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/lab5_autogen.dir/AutogenInfo.json Debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/timestamp && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5 /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5 /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/deps /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/d/368d8948b0eb223576b0ef6c365bb0d2ff52c5c51c8395436e395bb255e33bdf.d
+  DESC = Automatic MOC and UIC for target lab5
+  depfile = /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/d/368d8948b0eb223576b0ef6c365bb0d2ff52c5c51c8395436e395bb255e33bdf.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/lab5_autogen_timestamp_deps
+
+build CMakeFiles/lab5_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/lab5_autogen_timestamp_deps: phony /usr/local/share/qt/libexec/uic /usr/local/share/qt/libexec/moc
+
+
+#############################################
+# Phony custom command for CMakeFiles/lab5_autogen
+
+build CMakeFiles/lab5_autogen lab5_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/lab5_autogen ${cmake_ninja_workdir}lab5_autogen/include/ui_mainwindow.h: phony lab5_autogen/timestamp || lab5_autogen_timestamp_deps
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug
+
+build all: phony lab5
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckFlagCommonConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/MacroAddFileDependencies.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/local/lib/cmake/Qt6/Qt6Config.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/local/lib/cmake/Qt6/Qt6Targets.cmake /usr/local/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/local/lib/cmake/Qt6/QtFeature.cmake /usr/local/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusTargets-release.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-release.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-release.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-release.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeParseArguments.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCXXCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCXXSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckCompilerFlag.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckFlagCommonConfig.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/MacroAddFileDependencies.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/FindWrapAtomic.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/FindWrapOpenGL.cmake /usr/local/Cellar/qt/6.4.0/lib/cmake/Qt6/QtFeatureCommon.cmake /usr/local/lib/cmake/Qt6/Qt6Config.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigExtras.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigVersion.cmake /usr/local/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6/Qt6Dependencies.cmake /usr/local/lib/cmake/Qt6/Qt6Targets.cmake /usr/local/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/local/lib/cmake/Qt6/QtFeature.cmake /usr/local/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicTestHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicToolHelpers.cmake /usr/local/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreTargets-release.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/local/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-release.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/local/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusTargets-release.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/local/lib/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets-release.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/local/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QCocoaIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJp2PluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QJpegPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMinimalIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QMngPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTgaPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTiffPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginConfig.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets-release.cmake /usr/local/lib/cmake/Qt6Gui/Qt6QWebpPluginTargets.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-release.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/local/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-release.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-release.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/local/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-release.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/local/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean additional files.
+
+build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
+  CONFIG = Debug
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN CMakeFiles/clean.additional
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

@@ -1,0 +1,5 @@
+/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/lab5.dir
+/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/lab5_autogen_timestamp_deps.dir
+/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/CMakeFiles/lab5_autogen.dir
