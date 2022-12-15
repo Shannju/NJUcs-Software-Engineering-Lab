@@ -1,0 +1,35 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5_qt -B /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5_qt/cmake-build-debug
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+sh: ps: command not found
+-- The CXX compiler identification is unknown
+CMake Error at CMakeLists.txt:3 (project):
+  No CMAKE_CXX_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "CXX" or the CMake cache entry CMAKE_CXX_COMPILER to the full path
+  to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5_qt/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5_qt/cmake-build-debug/CMakeFiles/CMakeError.log".

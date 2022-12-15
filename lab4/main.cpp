@@ -3,7 +3,9 @@
 
 #include <unistd.h>
 #include "Input.h"
+#include <stdlib.h>
 #include "executor.h"
+#include "gtest/gtest.h"
 
 int main() {
     InputFolder inFolder("../input");

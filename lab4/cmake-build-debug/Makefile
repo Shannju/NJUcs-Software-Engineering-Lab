@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4/cmake-build-debug/CMakeFiles /Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab4/cmake-build-debug//CMakeFiles/progress.marks
@@ -128,6 +173,71 @@ lab4: cmake_check_build_system
 lab4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/build
 .PHONY : lab4/fast
+
+#=============================================================================
+# Target rules for targets named gtest01
+
+# Build rule for target.
+gtest01: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest01
+.PHONY : gtest01
+
+# fast build rule for target.
+gtest01/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/build
+.PHONY : gtest01/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f gtest_demo/lib/googlemock/CMakeFiles/gmock.dir/build.make gtest_demo/lib/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f gtest_demo/lib/googlemock/CMakeFiles/gmock_main.dir/build.make gtest_demo/lib/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f gtest_demo/lib/googletest/CMakeFiles/gtest.dir/build.make gtest_demo/lib/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f gtest_demo/lib/googletest/CMakeFiles/gtest_main.dir/build.make gtest_demo/lib/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
 
 Input.o: Input.cpp.o
 .PHONY : Input.o
@@ -176,6 +286,126 @@ executor.s: executor.cpp.s
 executor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/executor.cpp.s
 .PHONY : executor.cpp.s
+
+gtest_demo/src/Input.o: gtest_demo/src/Input.cpp.o
+.PHONY : gtest_demo/src/Input.o
+
+# target to build an object file
+gtest_demo/src/Input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/Input.cpp.o
+.PHONY : gtest_demo/src/Input.cpp.o
+
+gtest_demo/src/Input.i: gtest_demo/src/Input.cpp.i
+.PHONY : gtest_demo/src/Input.i
+
+# target to preprocess a source file
+gtest_demo/src/Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/Input.cpp.i
+.PHONY : gtest_demo/src/Input.cpp.i
+
+gtest_demo/src/Input.s: gtest_demo/src/Input.cpp.s
+.PHONY : gtest_demo/src/Input.s
+
+# target to generate assembly for a file
+gtest_demo/src/Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/Input.cpp.s
+.PHONY : gtest_demo/src/Input.cpp.s
+
+gtest_demo/src/executor.o: gtest_demo/src/executor.cpp.o
+.PHONY : gtest_demo/src/executor.o
+
+# target to build an object file
+gtest_demo/src/executor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/executor.cpp.o
+.PHONY : gtest_demo/src/executor.cpp.o
+
+gtest_demo/src/executor.i: gtest_demo/src/executor.cpp.i
+.PHONY : gtest_demo/src/executor.i
+
+# target to preprocess a source file
+gtest_demo/src/executor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/executor.cpp.i
+.PHONY : gtest_demo/src/executor.cpp.i
+
+gtest_demo/src/executor.s: gtest_demo/src/executor.cpp.s
+.PHONY : gtest_demo/src/executor.s
+
+# target to generate assembly for a file
+gtest_demo/src/executor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/executor.cpp.s
+.PHONY : gtest_demo/src/executor.cpp.s
+
+gtest_demo/src/output.o: gtest_demo/src/output.cpp.o
+.PHONY : gtest_demo/src/output.o
+
+# target to build an object file
+gtest_demo/src/output.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/output.cpp.o
+.PHONY : gtest_demo/src/output.cpp.o
+
+gtest_demo/src/output.i: gtest_demo/src/output.cpp.i
+.PHONY : gtest_demo/src/output.i
+
+# target to preprocess a source file
+gtest_demo/src/output.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/output.cpp.i
+.PHONY : gtest_demo/src/output.cpp.i
+
+gtest_demo/src/output.s: gtest_demo/src/output.cpp.s
+.PHONY : gtest_demo/src/output.s
+
+# target to generate assembly for a file
+gtest_demo/src/output.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/output.cpp.s
+.PHONY : gtest_demo/src/output.cpp.s
+
+gtest_demo/src/rand.o: gtest_demo/src/rand.cpp.o
+.PHONY : gtest_demo/src/rand.o
+
+# target to build an object file
+gtest_demo/src/rand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/rand.cpp.o
+.PHONY : gtest_demo/src/rand.cpp.o
+
+gtest_demo/src/rand.i: gtest_demo/src/rand.cpp.i
+.PHONY : gtest_demo/src/rand.i
+
+# target to preprocess a source file
+gtest_demo/src/rand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/rand.cpp.i
+.PHONY : gtest_demo/src/rand.cpp.i
+
+gtest_demo/src/rand.s: gtest_demo/src/rand.cpp.s
+.PHONY : gtest_demo/src/rand.s
+
+# target to generate assembly for a file
+gtest_demo/src/rand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/src/rand.cpp.s
+.PHONY : gtest_demo/src/rand.cpp.s
+
+gtest_demo/test/gtest01.o: gtest_demo/test/gtest01.cpp.o
+.PHONY : gtest_demo/test/gtest01.o
+
+# target to build an object file
+gtest_demo/test/gtest01.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/test/gtest01.cpp.o
+.PHONY : gtest_demo/test/gtest01.cpp.o
+
+gtest_demo/test/gtest01.i: gtest_demo/test/gtest01.cpp.i
+.PHONY : gtest_demo/test/gtest01.i
+
+# target to preprocess a source file
+gtest_demo/test/gtest01.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/test/gtest01.cpp.i
+.PHONY : gtest_demo/test/gtest01.cpp.i
+
+gtest_demo/test/gtest01.s: gtest_demo/test/gtest01.cpp.s
+.PHONY : gtest_demo/test/gtest01.s
+
+# target to generate assembly for a file
+gtest_demo/test/gtest01.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gtest01.dir/build.make CMakeFiles/gtest01.dir/gtest_demo/test/gtest01.cpp.s
+.PHONY : gtest_demo/test/gtest01.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -256,7 +486,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest01"
+	@echo "... gtest_main"
 	@echo "... lab4"
 	@echo "... Input.o"
 	@echo "... Input.i"
@@ -264,6 +503,21 @@ help:
 	@echo "... executor.o"
 	@echo "... executor.i"
 	@echo "... executor.s"
+	@echo "... gtest_demo/src/Input.o"
+	@echo "... gtest_demo/src/Input.i"
+	@echo "... gtest_demo/src/Input.s"
+	@echo "... gtest_demo/src/executor.o"
+	@echo "... gtest_demo/src/executor.i"
+	@echo "... gtest_demo/src/executor.s"
+	@echo "... gtest_demo/src/output.o"
+	@echo "... gtest_demo/src/output.i"
+	@echo "... gtest_demo/src/output.s"
+	@echo "... gtest_demo/src/rand.o"
+	@echo "... gtest_demo/src/rand.i"
+	@echo "... gtest_demo/src/rand.s"
+	@echo "... gtest_demo/test/gtest01.o"
+	@echo "... gtest_demo/test/gtest01.i"
+	@echo "... gtest_demo/test/gtest01.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

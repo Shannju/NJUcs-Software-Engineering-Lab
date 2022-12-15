@@ -1,12 +1,12 @@
 # ninja log v5
-11	76	1669879382247490403	/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/timestamp	d0c2d752356eff97
-568	2859	1669803363359215133	CMakeFiles/lab5.dir/lab5_autogen/mocs_compilation.cpp.o	77abce8fe3b45c52
-11	76	1669879382247490403	lab5_autogen/timestamp	d0c2d752356eff97
-81	3001	1669879385158196911	CMakeFiles/lab5.dir/mainwindow.cpp.o	76680d56480c178f
-11	76	1669879382247490403	lab5_autogen/mocs_compilation.cpp	d0c2d752356eff97
-84	2811	1669878989986617937	CMakeFiles/lab5.dir/main.cpp.o	ef6c37b9a6b946de
-81	1656	1669879383817014012	CMakeFiles/lab5.dir/input.cpp.o	ee8ee2e78fbb2d38
-83	3744	1669877444945754941	CMakeFiles/lab5.dir/Confirmer.cpp.o	1491011505a1e351
-85	2931	1669877444131560161	CMakeFiles/lab5.dir/output.cpp.o	afe450055feeaa7
-11	76	1669879382247490403	/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/mocs_compilation.cpp	d0c2d752356eff97
 3001	3185	1669879385349936648	lab5	99b5d63599ee6957
+11	76	1669879382247490403	/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/mocs_compilation.cpp	d0c2d752356eff97
+85	2931	1669877444131560161	CMakeFiles/lab5.dir/output.cpp.o	afe450055feeaa7
+83	3744	1669877444945754941	CMakeFiles/lab5.dir/Confirmer.cpp.o	1491011505a1e351
+81	1656	1669879383817014012	CMakeFiles/lab5.dir/input.cpp.o	ee8ee2e78fbb2d38
+84	2811	1669878989986617937	CMakeFiles/lab5.dir/main.cpp.o	ef6c37b9a6b946de
+11	76	1669879382247490403	lab5_autogen/mocs_compilation.cpp	d0c2d752356eff97
+81	3001	1669879385158196911	CMakeFiles/lab5.dir/mainwindow.cpp.o	76680d56480c178f
+11	76	1669879382247490403	lab5_autogen/timestamp	d0c2d752356eff97
+568	2859	1669803363359215133	CMakeFiles/lab5.dir/lab5_autogen/mocs_compilation.cpp.o	77abce8fe3b45c52
+11	76	1669879382247490403	/Users/shan/Desktop/Software-Engineering/NJUcs-Software-Engineering-Lab/lab5/cmake-build-debug/lab5_autogen/timestamp	d0c2d752356eff97
